@@ -1,0 +1,526 @@
+
+/***********************************       
+        CSS RESET
+*************************************/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/***********************************       
+        GENERAL STYLES
+*************************************/
+html {
+        scroll-behavior: smooth;
+}
+
+body {
+        font-size: 1.08rem;
+        line-height: 1.7;
+}
+
+/***********************************       
+        MENU STYLE
+*************************************/
+header {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        overflow: auto;
+        z-index: 1;
+        background-color: #fff;
+        height: auto;
+}
+
+header::after{
+        content: "";
+        display: table;
+        clear: both;
+}
+
+nav ul {
+        list-style-type: none;
+        text-align: right;
+        width: 75%;
+        float: right;
+        margin-right: 5%;
+}
+
+header li {
+        display: inline-block;
+        margin-left: 10px;
+}
+
+header a, a:visited  {
+        padding: 10px;
+        font-size: 1.1rem;
+        border: none;
+        color: #111;
+        text-decoration: none;
+}
+
+header a:hover {
+        color: rgb(24, 118, 190);
+}
+
+li a.started {
+        background-color: rgb(24, 118, 190);
+        color: #fff;
+        padding: 10px 35px;
+        border: none;
+        border-radius: 200px;
+}
+
+li a.started:hover {
+        background-color: rgba(24, 118, 190, 0.905);
+}
+
+
+/***********************************       
+        INTRO STYLE
+*************************************/
+#intro-background {
+        margin-top: 6%;
+        background-image: url('../img/homeBg.jpg');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 80vh;
+        position: relative;
+}
+
+.intro-item {
+        color: #fff;
+        position: absolute;
+        top: 35%;
+        left: 3%;
+        color: rgb(2, 27, 78);
+        width: 70%;
+}
+
+#intro-background .started {
+        color: rgb(2, 27, 78);
+        padding: 5px 10px;
+        border: none;
+        border-radius: 100px;
+        width: 180px;
+        border: 2px solid rgb(2, 27, 78);
+        margin-top: 20px;
+        text-align: center;
+}
+
+#intro-background .started:hover {
+        background-color: rgb(24, 118, 190);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+}
+
+/***********************************       
+        HOME STYLE
+*************************************/
+#Home-about {
+        background-color: #fff;
+        padding-top: 30px;
+}
+
+.about-container {
+        width: 88%;
+        margin: 0 auto;
+}
+
+.about-box {
+        width: 48%;
+        float: left;
+}
+
+.about-box ul {
+        list-style-position: inside;
+        list-style-image: url('../Img/listimage.png');
+        font-size: 1.2rem;;
+}
+
+.about-box img {
+        width: 100%;
+}
+
+.about-container {
+        content: "";
+        display: table;
+        clear: both;
+}
+
+#right {
+        margin-left: 4%;
+}
+
+.more {
+        background-color: rgb(24, 118, 190);
+        padding-left: 35px;
+        border: none;
+        border-radius: 100px;
+        width: 180px;
+        margin-top: 20px;
+        font-size: 1.1rem;
+        position: relative;
+}
+
+.more a {
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        width: 100%;
+}
+
+.more:hover {
+        background-color: rgba(37, 138, 216, 0.905);
+}
+
+.more:hover i {
+        transform: translateX(2px);
+}
+
+.more i {
+        position: absolute;
+        top: 9px;
+        margin-left: 5px;
+}
+
+/***********************************       
+        COUNTER SECTION
+*************************************/
+#counter {
+        margin-top: 3rem;
+
+        background-color: #f5f2f2;
+}
+
+.counter-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        padding: 50px;
+}
+
+.counter-container > div {
+        text-align: center;
+        line-height: 1.1;
+}
+
+.counter-container h2 {
+        color: rgb(24, 118, 190);
+        font-size: 3rem;
+}
+.counter-container p{
+        font-size: 1rem;
+        opacity: 0.8;
+}
+
+
+/***********************************       
+        HOME MENTOR STYLE
+*************************************/
+#Home-mentor {
+        background-color: #fff;
+        margin-top: 2rem;
+}
+
+.mentor-box-container {
+        width: 88%;
+        margin: 0 auto;
+        padding-top: 30px;
+}
+
+#mfirstBox {
+       width: 33%;
+       padding-top: 15px;
+       padding-left: 25px;
+       padding-right: 25px;
+       background-color: rgba(37, 138, 216, 0.905);
+       color: #fff;
+       float: left;
+       text-align: left;
+}
+
+#mfirstBox h2 {
+        font-size: 2.4rem;
+        line-height: 1.4;
+} 
+
+.learn {
+        margin-top: 20px;
+       text-align: center;
+}
+
+.learn a {
+        border: 2px solid #fff;
+        padding: 8px 20px;
+        background-color: #ffffff20;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 60px;
+}
+
+.learn a:hover {
+        background-color: #fff;
+        color: rgb(24, 118, 190);
+}
+
+.mentor-box {
+        border: 1px solid #ccc;
+        width: 21%;
+        float: left;
+        text-align: center;
+        padding-top: 50px;
+        height: 400px;
+        margin-left: 1%;
+}
+
+.mentor-box i {
+        font-size: 2.5rem;
+        color: rgb(24, 118, 190);
+}
+
+.mentor-box-container:hover i {
+        background-color: rgb(24, 118, 190);
+        color: #fff;
+        padding: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+}
+
+.mentor-box h3{
+        margin-top: 50px;
+}
+
+.mentor-box p{
+        margin-top: 25px;
+}
+
+.mentor-box-container::after {
+        display: table;
+        content: "";
+        clear: both;
+}
+
+/***********************************       
+        HOME COURSES STYLE
+*************************************/
+#home-courses {
+        padding-top: 50px;
+        margin: 0 auto;
+        width: 88%;
+}
+
+#home-courses .intro {
+        font-size: 1rem;
+        color: #000000b1;
+}
+
+.courses-container {
+        max-width: 100%;
+        display: flex;
+        gap: 1rem;
+}
+
+.courses-box {
+        border: 1px solid #ccc;
+        width: 33%;
+}
+
+.courses-box img {
+        width: 100%;
+}
+
+#course-contain {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 8px;
+        padding-right: 8px;
+}
+
+#course-contain div {
+        border: none;
+        padding: 5px 10px;
+        background-color: rgb(24, 118, 190);
+        color: #fff;
+        font-weight: 700;
+        border-radius: 3px;
+}
+
+#course-contain p {
+        font-weight: 700;
+        opacity: 0.7;
+        font-size: 1.2rem;
+}
+
+.course-foot-container {
+        border-top: 1px solid #ccc;
+        margin: 8px auto;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 8px;
+        width: 94%;
+}
+
+.course-foot-container .small-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+}
+
+.course-foot-container .first {
+        background: url('../Img/tut1.jpg');
+        background-size: cover;
+        background-position: top center;
+}
+
+.course-foot-container .second {
+        background: url('../Img/tut2.jpg');
+        background-size: cover;
+        background-position: top center;
+}
+
+.course-foot-container .third {
+        background: url('../Img/tut3.jpg');
+        background-size: cover;
+        background-position: top center;
+}
+
+.big {
+        display: flex;
+        justify-content: space-around;
+}
+
+.tutor-course-box {
+        border: 1px solid #ccc;
+        width: 33%;
+        margin-top: 5rem;
+        padding-bottom: 20px;
+}
+
+.tutor-course-box img {
+        width: 100%;
+        height: 500px;
+}
+
+.tutor-intro {
+        text-align: center;
+}
+
+/***********************************       
+        FOOTER STYLE
+*************************************/
+
+footer {
+        margin-top: 4rem;
+        background-color: #f5f2f2;
+        padding-bottom: 50px;
+}
+
+.footer-container {
+        width: 88%;
+        margin: 3rem auto;
+        padding-top: 3rem;
+}
+
+.footer-box {
+        width: 19%;
+        float: left;
+        margin-left:  6px;
+        line-height: 2.0;
+}
+
+.footer-container .both {
+        width: 28%;
+}
+
+.footer-container .last {
+        width: 32%;
+        font-size: 1rem;
+        position: relative;
+}
+
+.footer-container .first {
+        margin-left: 0;
+}
+
+.footer-container::after {
+        content: "";
+        display: table;
+        clear: both;
+}
+
+.footer-container ul {
+        list-style-type: none;
+}
+
+.footer-container a {
+   text-decoration: none;
+   color: #111;
+   font-size: 1rem;
+}
+
+.footer-container a:visited {
+        color: #111;
+        opacity: 0.8;
+}
+
+.footer-container a:hover {
+        color:rgba(37, 138, 216, 0.905);
+}
+
+input {
+        width: 80%;
+        height: 40px;
+        border-radius: 50px;
+        border: 1px solid #d5d5d5;
+}
+
+.btn {
+        position: absolute;
+        z-index: 1;
+        right: 60px;
+        height: 40px;
+        background-color: rgba(24, 118, 190, 0.905);
+        color: #fff;
+        border-radius: 50px;
+        padding: 0 25px;
+        border: 1px solid #d5d5d5;
+}
+
+.btn:hover {
+        background-color: rgba(37, 138, 216, 0.829);
+        color: #fff;
+        cursor: pointer;
+}
+
+#down-footer-box {
+        border: none;
+        background-color: #e3e2e2;
+        text-align: center;
+        width: 88%;
+        margin: 1rem auto;
+}
+
+#myName {
+        font-size: 1.2rem;
+        color: rgba(37, 138, 216, 0.905);
+}
+
+.line {
+        display: inline-block;
+        border: 1px solid rgba(132, 187, 228, 0.829);
+        width: 8%;
+        margin-left: 10px;
+        position: relative;
+        top: -4px;
+}
+
+iframe {
+        height: 400px;
+        width: 100%;
+}
