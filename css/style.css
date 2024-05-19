@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 /***********************************       
         CSS RESET
@@ -6,6 +8,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+img {
+        display: block;
+        width: 100%;
 }
 
 /***********************************       
@@ -18,6 +25,7 @@ html {
 body {
         font-size: 1.08rem;
         line-height: 1.7;
+        font-family: "Karla", sans-serif;;
 }
 
 /***********************************       
@@ -43,10 +51,23 @@ header::after{
 
 nav ul {
         list-style-type: none;
-        text-align: right;
-        width: 75%;
+        text-align: center;
+        width: 70%;
         float: right;
         margin-right: 5%;
+        padding-top: 25px;
+}
+
+.header {
+        float: left;
+        width: 15%;
+        text-align: right;
+        font-size: 2.5rem;
+        color: #1876be;
+        font-weight: bold;
+        margin-left: 5%;
+        letter-spacing: 4px;
+        font-family: "Archivo Black", sans-serif;
 }
 
 header li {
@@ -125,11 +146,13 @@ li a.started:hover {
 #Home-about {
         background-color: #fff;
         padding-top: 30px;
+        
 }
 
 .about-container {
         width: 88%;
         margin: 0 auto;
+        max-width: 1400px;
 }
 
 .about-box {
@@ -231,6 +254,7 @@ li a.started:hover {
         width: 88%;
         margin: 0 auto;
         padding-top: 30px;
+        max-width: 1400px;
 }
 
 #mfirstBox {
@@ -312,6 +336,7 @@ li a.started:hover {
         padding-top: 50px;
         margin: 0 auto;
         width: 88%;
+        max-width: 1400px;
 }
 
 #home-courses .intro {
@@ -322,6 +347,7 @@ li a.started:hover {
 .courses-container {
         max-width: 100%;
         display: flex;
+        flex-flow: row nowrap;
         gap: 1rem;
 }
 
@@ -340,6 +366,7 @@ li a.started:hover {
         justify-content: space-between;
         padding-left: 8px;
         padding-right: 8px;
+        margin-top: 10px;
 }
 
 #course-contain div {
@@ -395,21 +422,41 @@ li a.started:hover {
         justify-content: space-around;
 }
 
+.other-big {
+        padding-top: 5px;
+}
+
 .tutor-course-box {
         border: 1px solid #ccc;
-        width: 33%;
+        width: 500px;
         margin-top: 5rem;
         padding-bottom: 20px;
 }
 
 .tutor-course-box img {
-        width: 100%;
-        height: 500px;
+        height: 450px;
 }
 
 .tutor-intro {
         text-align: center;
 }
+
+.tutor-socials {
+        margin-top: 5px;
+        text-align: center;
+}
+
+.tutor-socials a {
+        margin: 5px;
+        font-size: 1.2rem;
+        text-decoration: none;
+}
+
+.fa-brands:hover {
+        color: rgb(24, 118, 190);
+        font-size: 1.3rem;
+}
+
 
 /***********************************       
         FOOTER STYLE
@@ -425,6 +472,7 @@ footer {
         width: 88%;
         margin: 3rem auto;
         padding-top: 3rem;
+        max-width: 1400px;
 }
 
 .footer-box {
@@ -523,4 +571,407 @@ input {
 iframe {
         height: 400px;
         width: 100%;
+}
+
+/***********************************       
+        MEDIA QUERIES
+*************************************/
+@media (max-width: 525px) {
+
+        body {
+                width: 100%;
+        }
+
+        main {
+                min-height: 100vh;;
+        }
+
+        /*Menu*/
+        header {
+                width: 100%;
+                padding-bottom: 0;
+                height: 325px;
+                margin-top: 0;
+        }
+
+        .header {
+                float: none;
+                display:block;
+                width: 100%;
+                text-align: center;
+                margin: 0;
+        }
+
+        nav ul {
+                float: none;
+                width: 100%;
+                margin: 0;
+                padding-top: 0;
+        }
+
+        header li {
+                display: block;
+                margin-left: 0;
+        }
+
+        header a:hover {
+                color:rgb(24, 118, 190);
+                text-decoration: underline;
+        }
+
+        li a.started {
+                display: none;
+        }
+
+
+        #intro-background {
+                margin-top: 22rem;
+        }
+
+        .intro-item {
+                position: absolute;
+                top: 10px;
+                left: 3%;
+                width: 300px;
+        }
+
+        #intro-background .started {
+                background-color: rgb(24, 118, 190);
+                color: #fff;
+                border: none;
+                cursor: pointer;
+        }
+
+          /*Home*/
+        .about-container {
+                width: 100%;
+        }
+
+        .about-box {
+                float: none;
+                width: 100%;
+                padding-left: 10px;
+        }
+        
+        .about-box img {
+                width: 300px;
+                height: auto;
+                margin: auto;
+        }
+
+        #right {
+                margin-top: 15px;
+                margin-left: 0;
+        }
+
+          /*Counter*/
+          .counter-container {
+                grid-template-columns: auto;;
+          }
+
+          .counter-container > div  {
+                margin-bottom: 10px;
+          }
+
+          /*Mentor*/
+          .mentor-box-container {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+        }
+
+        #mfirstBox {
+                float: none;
+                width: 310px;
+                height: 500px;
+                overflow: auto;
+        }
+
+        .mentor-box {
+                float: none;
+                width: 270px;
+                margin: 10px auto;
+        }
+
+          /*Courses*/
+          #home-courses {
+                padding-top: 40px;
+                padding-left: 10px;
+                margin: 0;
+                width: 100%;
+        }
+        
+        .courses-container {
+                width: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                padding-right: 10px;
+        }
+
+        .courses-box {
+                border: 1px solid #ccc;
+                width: 300px;
+        }
+
+        .tutor-course-box{
+                width: 250px;
+        }
+
+        .tutor-course-box img {
+                height: 300px;
+        }
+
+          /*footer*/
+        .footer-container {
+                width: 100%;
+                margin: 0;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 2rem;
+        }
+
+        .footer-container .both {
+                width: 250px;
+                padding-left: 0;
+        }
+
+        .footer-container .last {
+                width: 250px;
+                padding-left: 0;
+        }
+
+        .footer-box {
+                width: 250px;
+                padding-left: 0;
+                float: none;
+                margin-left: 0;
+                margin-bottom: 1rem;
+        }
+        
+        input  {
+                width: 100%;
+                height: 30px;
+                border-radius: 0px;
+        }
+
+        .btn {
+                bottom: -50px;
+        }
+
+        #down-footer-box {
+                border: none;
+                background-color: #e3e2e2;
+                text-align: center;
+                width:100%;
+                margin-top: 3rem;
+        }
+        
+}
+
+@media (min-width: 525px) and (max-width: 1180px){
+
+        body {
+                width: 100%;
+        }
+
+        main {
+                min-height: 100vh;
+        }
+
+        /*Menu*/
+
+
+        header {
+                width: 100%;
+                padding-bottom: 0;
+                height: 325px;
+                margin-top: 0;
+        }
+
+        .header {
+                float: none;
+                display:block;
+                width: 100%;
+                text-align: center;
+                margin: 0;
+        }
+
+        nav ul {
+                float: none;
+                width: 100%;
+                margin: 0;
+                padding-top: 0;
+        }
+
+        header li {
+                display: block;
+                margin-left: 0;
+        }
+
+        header a:hover {
+                color:rgb(24, 118, 190);
+                text-decoration: underline;
+        }
+
+        li a.started {
+                display: none;
+        }
+
+
+        #intro-background {
+                margin-top: 22rem;
+        }
+
+        .intro-item {
+                position: absolute;
+                top: 10px;
+                left: 3%;
+                width: 300px;
+        }
+
+        #intro-background .started {
+                background-color: rgb(24, 118, 190);
+                color: #fff;
+                border: none;
+                cursor: pointer;
+        }
+
+          /*Home*/
+        .about-container {
+                width: 100%;
+                padding-left: 20px;
+        }
+
+        .about-box {
+                float: none;
+                width: 100%;
+                padding-left: 10px;
+                padding-right: 20px;
+        }
+        
+        .about-box img {
+                width: 100%;
+                min-width: 450px;
+                height: auto;
+                margin: auto;
+        }
+
+        #right {
+                margin-top: 15px;
+                margin-left: 0;
+        }
+
+          /*Counter*/
+          .counter-container {
+                grid-template-columns: auto auto;
+          }
+
+          .counter-container > div  {
+                margin-bottom: 10px;
+                padding: 10px;
+          }
+
+          /*Mentor*/
+          .mentor-box-container {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+        }
+
+        #mfirstBox {
+                float: none;
+                width: 500px;
+                height: 450px;
+                overflow: auto;
+        }
+
+        .mentor-box {
+                float: none;
+                width: 480px;
+                margin: 10px auto;
+        }
+
+          /*Courses*/
+          #home-courses {
+                padding-top: 40px;
+                padding-left: 20px;
+                margin: 0;
+                width: 100%;
+        }
+        
+        .courses-container {
+                width: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                padding-right: 10px;
+        }
+
+        .courses-box {
+                border: 1px solid #ccc;
+                width: 500px;
+        }
+
+        .tutor-course-box{
+                width: 500px;
+        }
+
+        .tutor-course-box img {
+                height: 450px;
+        }
+
+          /*footer*/
+        .footer-container {
+                width: 100%;
+                margin: 0;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 2rem;
+        }
+
+        .footer-container .both {
+                width: 500px;
+                padding-left: 0;
+        }
+
+        .footer-container .last {
+                width: 500px;
+                padding-left: 0;
+        }
+
+        .footer-box {
+                width: 500px;
+                padding-left: 0;
+                float: none;
+                margin-left: 0;
+                margin-bottom: 1rem;
+        }
+        
+        input  {
+                width: 80%;
+        }
+
+       /*  .btn {
+                display: block;
+                margin: auto;
+                bottom: -50px;
+        } */
+
+        #down-footer-box {
+                border: none;
+                background-color: #e3e2e2;
+                text-align: center;
+                width:100%;
+                margin-top: 3rem;
+        }
+        
 }
